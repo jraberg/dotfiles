@@ -1,0 +1,56 @@
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore-global,~/.gitignore
+    ignorecase = false
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+
+[user]
+    name = <name>
+    email = <email>
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[url "https://gist.github.com/"]
+    insteadOf = gist:
+
+[color]
+    ui = true
+    commit = red
+
+[color "branch"]
+    current = yellow reverse
+    local = yello
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[alias]
+    a = add
+
+    ls =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ld =  log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    lg =  log --graph
+    lme = log --graph --author='Jonas Raberg'
+
+    st = status
+
