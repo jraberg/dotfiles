@@ -1,0 +1,26 @@
+#
+# Virtual enviroment
+#
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+source /usr/local/bin/virtualenvwrapper.sh
+
+#
+# History
+#
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+HISTCONTROL=ignoreboth
+PROMPT_COMMAND='history -a'
+shopt -s histappend
+shopt -s cmdhist
+
+. ~/.bash_prompt
+
+[ -z "$TMUX" ] && export TERM=xterm-256color
+EDITOR=vi
+export EDITOR
+
+
+SANDBOX_BINARY=$HOME/mysql-bin
+export SANDBOX_BINARY
