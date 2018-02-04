@@ -24,3 +24,10 @@ export EDITOR
 
 SANDBOX_BINARY=$HOME/mysql-bin
 export SANDBOX_BINARY
+
+# Go configuration
+GOPATH=$HOME/go
+export GOPATH
+PATH=$PATH:$GOPATH/bin
+export PATH
+
