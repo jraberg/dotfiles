@@ -1,66 +1,66 @@
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore-global,~/.gitignore
-    ignorecase = false
-    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+  editor = vim
+  excludesfile = ~/.gitignore-global,~/.gitignore
+  ignorecase = false
+  whitespace = trailing-space,space-before-tab,indent-with-non-tab
 
 [user]
-	name = Råberg Jonas
-	email = jonas@nogui.eu
+  name = Råberg Jonas
+  email = jonas@nogui.eu
 
 [url "https://github.com/"]
-    insteadOf = gh:
+  insteadOf = gh:
 
 [url "https://gist.github.com/"]
-    insteadOf = gist:
+  insteadOf = gist:
 
 [url "https://bitbucket.org/"]
-    insteadOf = bb:
+  insteadOf = bb:
 
 [color]
-    ui = true
-    commit = red
+  ui = true
+  commit = red
 
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 
 [color "status"]
-    added = green bold
-    changed = yellow bold
-    untracked = red bold
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
 
 [diff]
-    tool = vimdiff
+  tool = vimdiff
 
 [difftool]
-    prompt = false
+  prompt = false
 
 [alias]
-    a = add
+  a = add
 
-    ls =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-    ll =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-    ld =  log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-    lg =  log --graph
-    lme = log --graph --author='Jonas Raberg'
+  ls =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+  lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+  ld =  log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  lg =  log --graph
+  lme = log --graph --author='Jonas Raberg'
 
-    co = checkout
+  co = checkout
    
-    c = commit
-    cm = commit -m
+  c = commit
+  cm = commit -m
     
-    st = status
+  st = status
 
 [http]
-	sslverify = false
+  sslverify = false
