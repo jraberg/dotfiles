@@ -61,3 +61,5 @@ alias du='du -ch'
 
 alias h='history'
 alias j='jobs -l'
+
+alias v='vim'
