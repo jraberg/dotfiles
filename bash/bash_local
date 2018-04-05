@@ -1,3 +1,13 @@
+# bash alias
+if [[ -r ~/.bash_alias ]]; then
+  source ~/.bash_alias
+fi
+
+# bash functions
+if [[ -r ~/.bash_funcs ]]; then
+  source ~/.bash_funcs
+fi
+
 #
 # Virtual enviroment
 #
