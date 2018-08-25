@@ -1,0 +1,37 @@
+##############################################################################
+#
+# ssh configuration
+# 
+##############################################################################
+
+
+#----------------------------------------------------------------------------
+# Configuration for all hosts
+#----------------------------------------------------------------------------
+Host *
+    ForwardAgent no
+    ForwardX11 no
+    ForwardX11Trusted yes
+    User nixcraft
+    Port 22
+    Protocol 2
+    UserKnownHostsFile ~/.ssh/known_hosts
+    LogLevel INFO
+    StrictHostKeyChecking ask
+    VisualHostKey yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 30 
+    
+#----------------------------------------------------------------------------
+# Custom configuration by host/hosts
+#----------------------------------------------------------------------------
+Host github.com-jraberg
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/github.com-jraberg
+
+Host host-alias
+    HostName hostname.com
+    User your-user
+    IdentityFile ~/.ssh/your-key-file
+    

@@ -11,8 +11,8 @@
   whitespace = trailing-space,space-before-tab,indent-with-non-tab
 
 [user]
-  name = Råberg Jonas
-  email = jonas@nogui.eu
+  name = jraberg
+  email = jonas.raberg@gmail.com
 
 [url "https://github.com/"]
   insteadOf = gh:

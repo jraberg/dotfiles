@@ -9,7 +9,9 @@
 alias ..="cd .."
 alias ...="cd ../.."
 
+#----------------------------------------------------------------------------
 # Shortcuts
+#----------------------------------------------------------------------------
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
@@ -24,6 +26,10 @@ alias du='du -ch'
 alias h='history'
 alias j='jobs -l'
 
+#----------------------------------------------------------------------------
+# Improve existing commands
+#----------------------------------------------------------------------------
+
 # Add confirmation
 alias mv='mv -i'
 alias cp='cp -i'
@@ -33,12 +39,6 @@ alias ln='ln -i'
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias l.='ls -d .* --color=auto'
-
-# Get week number
-alias week='date +%V'
-
-# Weather in the terminal
-alias getweth='curl wttr.in/linkoping?lang=se'
 
 # Use colordiff
 alias diff='colordiff'
@@ -67,6 +67,18 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+#----------------------------------------------------------------------------
+# get the weather in Linköping and current week no
+#----------------------------------------------------------------------------
+# Get week number
+alias week='date +%V'
+
+# Weather in the terminal
+alias getweth='curl wttr.in/linkoping?lang=se'
+
+#----------------------------------------------------------------------------
+# OS info
+#----------------------------------------------------------------------------
 # memory info
 alias meminfo='free -m -l -t'
 
@@ -84,3 +96,20 @@ alias cpuinfo='lscpu'
 
 # Formated mount listing
 alias mount='mount |column -t'
+
+#----------------------------------------------------------------------------
+# Definitions of alias for Docker
+#---------------------------------------------------------------------------- 
+alias sshagt='eval "$(ssh-agent -s)"'
+
+#----------------------------------------------------------------------------
+# Definitions of alias for Docker
+#---------------------------------------------------------------------------- 
+alias dkps="docker ps"
+alias dkst="docker stats"
+alias dkpsa="docker ps -a"
+alias dkimgs="docker images"
+alias dkcpup="docker-compose up -d"
+alias dkcpdown="docker-compose down"
+alias dkcpstart="docker-compose start"
+alias dkcpstop="docker-compose stop"
