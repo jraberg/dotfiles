@@ -51,10 +51,10 @@ chmod 750 ~/.vimrc
 # zsh
 #----------------------------------------------------------------------------
 echo "===> Installing zsh configuration <==="
-cp $INST_DIR/.alias ~/
+cp $INST_DIR/.aliases ~/
 cp $INST_DIR/.functions ~/
 cp $INST_DIR/.zshrc ~/
-chmod 750 ~/.alias
+chmod 750 ~/.aliases
 chmod 750 ~/.functions
 chmod 750 ~/.zshrc
 
