@@ -35,9 +35,21 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 
+# Color on ls output
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias l.='ls -d .* --color=auto'
+
+# Use colordiff
+alias diff='colordiff'
+
+# Use color for the grep command
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
 # list sorted environment variables§
 alias envs='env|sort'
-
 # Clear the screen
 alias c='clear'
 
@@ -46,6 +58,14 @@ alias ports='netstat -tulanp'
 
 # Add math support to the calculater
 alias bc='bc -l'
+
+# Don't delete root (/) and prompt if deleting more than 3 files
+alias rm='rm -I --preserve-root'
+
+# Protect changes on root
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
 
 #----------------------------------------------------------------------------
 # get the weather in Linköping and current week no
