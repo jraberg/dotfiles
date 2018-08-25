@@ -62,18 +62,11 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-  git
-  git-flow
-  git-prompt
-  gitignore
+plugins=( zsh-syntax-highlighting zsh-autosuggestions
+  git git-flow git-prompt gitignore
   history
   common-aliases
-  yarn
-  nvm
-  npm
+  yarn nvm npm
   ng
   aws
   history
@@ -82,8 +75,7 @@ plugins=(
   brew
   cp
   jsontools
-  iterm2
-  osx
+  iterm2 osx
   rsync
   sudo
   vscode
@@ -93,8 +85,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# nvm configuration
 export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
+source "/usr/local/opt/nvm/nvm.sh"
 
 source $HOME/.oh-my-zsh/plugins/z/z.sh
 
