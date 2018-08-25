@@ -112,7 +112,7 @@ set colorcolumn=80
 
 " Theme
 set background=light
-colorscheme Tomorrow-Night
+colorscheme desert
 
 
 " Git gutter
