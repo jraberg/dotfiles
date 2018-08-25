@@ -146,3 +146,13 @@ done;
 unset file;
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#MySQL Sandbox
+SANDBOX_BINARY=$HOME/mysql-bin
+export SANDBOX_BINARY
+
+# Go configuration
+GOPATH=$HOME/go
+export GOPATH
+PATH=$PATH:$GOPATH/bin
+export PATH
