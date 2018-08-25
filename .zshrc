@@ -156,3 +156,8 @@ GOPATH=$HOME/go
 export GOPATH
 PATH=$PATH:$GOPATH/bin
 export PATH
+
+# Pager config
+export PAGER=less
+export LESS="-iMSx4 -FX"
+

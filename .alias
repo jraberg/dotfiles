@@ -1,16 +1,21 @@
-
+##############################################################################
+#
+# Definitions of alias 
+# Please check alias in oh-my-zsh plugin common-alias at
+#  https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/common-aliases
+# 
+##############################################################################
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
 
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias pp="cd ~/projects"
+alias bb="cd ~/projects/bitbucket"
+alias gh="cd ~/projects/github.com"
 
 alias g="git"
 alias v='vim'
@@ -19,20 +24,25 @@ alias du='du -ch'
 alias h='history'
 alias j='jobs -l'
 
+# Add confirmation
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+# Color on ls output
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias l.='ls -d .* --color=auto'
+
 # Get week number
 alias week='date +%V'
 
 # Weather in the terminal
 alias getweth='curl wttr.in/linkoping?lang=se'
 
-# Color on ls output
-alias ls='ls --color=auto'
-# long listing
-alias ll='ls -la'
-# List hidden files
-alias l.='ls -d .* --color=auto'
 # Use colordiff
 alias diff='colordiff'
+
 # Use color for the grep command
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -51,11 +61,6 @@ alias bc='bc -l'
 
 # Don't delete root (/) and prompt if deleting more than 3 files
 alias rm='rm -I --preserve-root'
-
-# Add confirmation
-alias mv='mv -i'
-alias cp='cp -i'
-alias ln='ln -i'
 
 # Protect changes on root
 alias chown='chown --preserve-root'

@@ -4,13 +4,33 @@
 -- Customize psql client
 --
 -------------------------------------------------------------------------------
+-- Print date on startup
+\echo `date  +"%Y-%m-%d %H:%M:%S"`
+
+\set QUIET 1
+-- Do not automatically commit
+\set AUTOCOMMIT off
 
 -- Define custom prompt
-\set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
-\set PROMPT2 '[more] %R > '
+-- [user]@[host]:[port]/[db]['*' if we are in a transaction]['#' if we are root-like; '>' otherwise]
+\set PROMPT1 '%n@%m:%>/%/%x%# '
+\set PROMPT2 ''
 
 --  Display null values as [NULL]
-\pset null '[NULL]'
+\pset null '(null)'
+
+-- Enable unicode
+\encoding UTF8
+
+-- Improve table formatting
+\pset linestyle 'unicode'
+\pset unicode_border_linestyle single
+\pset unicode_column_linestyle single
+\pset unicode_header_linestyle double
+
+-- Turn off pager and set editor
+\pset pager off
+\setenv EDITOR 'vim'
 
 -- Use table format
 \x auto
@@ -18,9 +38,18 @@
 -- Verbose error reports.
 --\set VERBOSITY verbose
 
+-- Timing on queries
+\timing
+
 -- Use a separate history file per-database and remove duplicates
+\set HISTSIZE 2500
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 
--- Autocomplete keywords in upper-case
-\set COMP_KEYWORD_CASE upper
+-- Autocomplete keywords in lower-case
+\set COMP_KEYWORD_CASE lower
+
+-- Identify my session
+set application_name to jora; commit;
+
+\unset QUIET
