@@ -6,7 +6,7 @@
 ##############################################################################
 
 
-INST_DIR="~/tmp/dotfiles"
+export INST_DIR="~/tmp/dotfiles"
 
 #----------------------------------------------------------------------------
 # create base directories
@@ -23,7 +23,7 @@ mkdir -p ~/projects/scratchpad
 echo "===> Installing ssh configuration <==="
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
-touch -p ~/.ssh/authorized_keys
+touch ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 
 cp "$INST_DIR/ssh_config" "~/.ssh/config"
