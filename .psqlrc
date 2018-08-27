@@ -9,7 +9,8 @@
 
 \set QUIET 1
 -- Do not automatically commit
-\set AUTOCOMMIT off
+--\set AUTOCOMMIT off
+\set AUTOCOMMIT on
 
 -- Define custom prompt
 -- [user]@[host]:[port]/[db]['*' if we are in a transaction]['#' if we are root-like; '>' otherwise]
