@@ -125,10 +125,6 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
 # Source aliases and functions
 for file in ~/.{aliases,functions}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -146,5 +142,13 @@ PATH=$PATH:$GOPATH/bin
 export PATH
 
 # Pager config
-export PAGER=less
-export LESS="-iMSx4 -FX"
+export PAGER=more
+
+# Spaceship prompt configuration
+
+fpath=($fpath "/home/jora/.zfunctions")
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
