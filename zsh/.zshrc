@@ -96,7 +96,6 @@ source $ZSH/oh-my-zsh.sh
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -126,19 +125,26 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Source aliases and functions
-for file in ~/.{alias,functions}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-# Pager config
-export PAGER=less
-export LESS=eFRX
-
-fpath=($fpath "/home/jora/.zfunctions")
-
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
 
+# Source aliases and functions
+for file in ~/.{aliases,functions}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+#MySQL Sandbox
+SANDBOX_BINARY=$HOME/mysql-bin
+export SANDBOX_BINARY
+
+# Go configuration
+GOPATH=$HOME/go
+export GOPATH
+PATH=$PATH:$GOPATH/bin
+export PATH
+
+# Pager config
+export PAGER=less
+export LESS="-iMSx4 -FX"
