@@ -35,7 +35,7 @@ chmod 600 ~/.ssh/config
 echo "===> Creating empty AWS cli configuration <==="
 mkdir -p ~/.aws
 chmod 750 ~/.aws
-touch ~/.aws/credentials
+cp  $INST_DIR/aws/credentials  ~/.aws/credentials 
 chmod 600 ~/.aws/credentials
 cp  $INST_DIR/aws/config ~/.aws/config
 chmod 600 ~/.aws/config
