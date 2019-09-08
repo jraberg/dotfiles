@@ -1,0 +1,28 @@
+# alias
+if [[ -r ~/.alias ]]; then
+  source ~/.alias
+fi
+
+# functions
+if [[ -r ~/.funcs ]]; then
+  source ~/.funcs
+fi
+
+
+#MySQL Sandbox    
+SANDBOX_BINARY=$HOME/mysql-bin
+export SANDBOX_BINARY
+
+# Go configuration
+GOPATH=$HOME/go
+export GOPATH
+PATH=$PATH:$GOPATH/bin
+export PATH
+
+# Pager config
+export PAGER=more
+
+# Editor
+#
+EDITOR=vim
+export EDITOR

@@ -8,7 +8,9 @@ export ZSH="/home/jora/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -26,8 +28,14 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -63,40 +71,22 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  zsh-syntax-highlighting 
-  zsh-autosuggestions
-  common-alias
-  copyfile
-  docker-compose
-  docker
-  history
-  colored-man-pages
-  encode64
-  extract 
-  git
-  github
-  git-extras
-  git-prompt
-  gitignore
-  jsontools
-  node
-  npm
-  penv
-  virtualenv
-  yarn
-  vscode
-  terraform
-
-)
+    common-aliases
+    aws
+    autopep8
+    dotenv
+    git
+    heroku 
+    docker-compose
+    docker
+    jsontools
+    virtualenv
+    terraform
+    )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# NVM configuration
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -104,17 +94,14 @@ export NVM_DIR="$HOME/.nvm"
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#if [[ -n $SSH_CONNECTION ]]; then
+#  export EDITOR='vim'
+#else
+#  export EDITOR='vim'
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -125,30 +112,7 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Source aliases and functions
-for file in ~/.{aliases,functions}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
-
-#MySQL Sandbox
-SANDBOX_BINARY=$HOME/mysql-bin
-export SANDBOX_BINARY
-
-# Go configuration
-GOPATH=$HOME/go
-export GOPATH
-PATH=$PATH:$GOPATH/bin
-export PATH
-
-# Pager config
-export PAGER=more
-
-# Spaceship prompt configuration
-
-fpath=($fpath "/home/jora/.zfunctions")
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
-
+# alias
+if [[ -r ~/.zsh_local ]]; then
+  source ~/.zsh_local
+fi

@@ -6,16 +6,16 @@
 ##############################################################################
 
 
-export INST_DIR=~/tmp/dotfiles
+export INST_DIR=~/github.com/dotfiles
 
 #----------------------------------------------------------------------------
 # create base directories
 #----------------------------------------------------------------------------
 echo "===> Creating base directories <==="
 mkdir -p ~/projects
-mkdir -p ~/projects/bitbucket
-mkdir -p ~/projects/github.com
-mkdir -p ~/projects/scratchpad
+mkdir -p ~/bitbucket
+mkdir -p ~/github.com
+mkdir -p ~/scratchpad
 
 #----------------------------------------------------------------------------
 # ssh configuration
@@ -26,7 +26,7 @@ chmod 700 ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 
-cp $INST_DIR/ssh_config ~/.ssh/config
+cp $INST_DIR/ssh/ssh_config ~/.ssh/config
 chmod 600 ~/.ssh/config
 
 #----------------------------------------------------------------------------
@@ -35,25 +35,26 @@ chmod 600 ~/.ssh/config
 echo "===> Creating empty AWS cli configuration <==="
 mkdir -p ~/.aws
 chmod 750 ~/.aws
-cp  $INST_DIR/aws_credentials ~/.aws/credentials
+touch ~/.aws/credentials
 chmod 600 ~/.aws/credentials
-cp  $INST_DIR/aws_config ~/.aws/config
+cp  $INST_DIR/aws/aws_config ~/.aws/config
 chmod 600 ~/.aws/config
 
 #----------------------------------------------------------------------------
 # vim
 #----------------------------------------------------------------------------
 echo "===> Installing vim configuration <==="
-cp $INST_DIR/.vimrc ~/
+cp $INST_DIR/vim/.vimrc ~/
 chmod 750 ~/.vimrc
 
 #----------------------------------------------------------------------------
 # zsh
 #----------------------------------------------------------------------------
 echo "===> Installing zsh configuration <==="
-cp $INST_DIR/.aliases ~/
-cp $INST_DIR/.functions ~/
-cp $INST_DIR/.zshrc ~/
+cp $INST_DIR/zsh/.aliases ~/
+cp $INST_DIR/zsh/.functions ~/
+cp $INST_DIR/zsh/.zsh_local ~/
+cp $INST_DIR/zsh/.zshrc ~/
 chmod 750 ~/.aliases
 chmod 750 ~/.functions
 chmod 750 ~/.zshrc
@@ -62,23 +63,23 @@ chmod 750 ~/.zshrc
 # postgres
 #----------------------------------------------------------------------------
 echo "===> Installing postgres configuration <==="
-cp $INST_DIR/.psqlrc ~/
+cp $INST_DIR/psql/.psqlrc ~/
 chmod 750 ~/.psqlrc
 
 #----------------------------------------------------------------------------
 # mysql
 #----------------------------------------------------------------------------
 echo "===> Installing mysql configuration <==="
-cp $INST_DIR/ssh_config ~/
+cp $INST_DIR/ssh/ssh_config ~/
 chmod 750 ~/.ssh/config
 
 #----------------------------------------------------------------------------
 # git
 #----------------------------------------------------------------------------
 echo "===> Installing git configuration <==="
-cp $INST_DIR/.gitconfig ~/
-cp $INST_DIR/.gitignore_global ~/
-cp $INST_DIR/.*.gitignore ~/
+cp $INST_DIR/git/.gitconfig ~/
+cp $INST_DIR/git/.gitignore_global ~/
+cp $INST_DIR/git/.*.gitignore ~/
 chmod 750 ~/.gitconfig
 chmod 750 ~/.gitignore_global
 chmod 750 ~/.*.gitignore
