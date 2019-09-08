@@ -37,7 +37,7 @@ mkdir -p ~/.aws
 chmod 750 ~/.aws
 touch ~/.aws/credentials
 chmod 600 ~/.aws/credentials
-cp  $INST_DIR/aws/aws_config ~/.aws/config
+cp  $INST_DIR/aws/config ~/.aws/config
 chmod 600 ~/.aws/config
 
 #----------------------------------------------------------------------------
