@@ -21,7 +21,7 @@
 \pset null '(null)'
 
 -- Enable unicode
-\encoding UTF8
+\encoding unicode
 
 -- Improve table formatting
 \pset linestyle 'unicode'
@@ -44,7 +44,7 @@
 
 -- Use a separate history file per-database and remove duplicates
 \set HISTSIZE 2500
-\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTFILE ~/.psql_history- :HOST - : DBNAME
 \set HISTCONTROL ignoredups
 
 -- Autocomplete keywords in lower-case
