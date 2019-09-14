@@ -1,11 +1,11 @@
 # alias
-if [[ -r ~/.alias ]]; then
-  source ~/.alias
+if [[ -r ~/.aliases ]]; then
+  source ~/.aliases
 fi
 
 # functions
-if [[ -r ~/.funcs ]]; then
-  source ~/.funcs
+if [[ -r ~/.functions ]]; then
+  source ~/.functions
 fi
 
 

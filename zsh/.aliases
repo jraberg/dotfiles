@@ -16,8 +16,8 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias pp="cd ~/projects"
-alias bb="cd ~/projects/bitbucket"
-alias gh="cd ~/projects/github.com"
+alias bb="cd ~/bitbucket"
+alias gh="cd ~/github.com"
 
 alias g="git"
 alias v='vim'
