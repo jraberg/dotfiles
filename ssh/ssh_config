@@ -25,10 +25,10 @@ Host *
 #----------------------------------------------------------------------------
 # Custom configuration by host/hosts
 #----------------------------------------------------------------------------
-Host github.com-jraberg
+Host github.com
 	HostName github.com
 	User git
-	IdentityFile ~/.ssh/github.com-jraberg
+	IdentityFile ~/.ssh/github.com.jraberg
 
 Host host-alias
     HostName hostname.com

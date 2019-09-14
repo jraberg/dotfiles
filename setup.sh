@@ -58,6 +58,8 @@ cp $INST_DIR/zsh/.zshrc ~/
 chmod 750 ~/.aliases
 chmod 750 ~/.functions
 chmod 750 ~/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 #----------------------------------------------------------------------------
 # postgres
