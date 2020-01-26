@@ -79,6 +79,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 #----------------------------------------------------------------------------
+# nvm (nodejs)
+#----------------------------------------------------------------------------
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+
+#----------------------------------------------------------------------------
 # postgres
 #----------------------------------------------------------------------------
 echo "===> Installing postgres configuration <==="
