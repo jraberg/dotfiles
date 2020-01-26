@@ -50,7 +50,13 @@ chmod 750 ~/.vimrc
 #----------------------------------------------------------------------------
 # zsh
 #----------------------------------------------------------------------------
+sudo apt-get -y install curl git zsh npm fonts-powerline fonts-firacode
+
 echo "===> Installing zsh configuration <==="
+# om-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# configuration
 cp $INST_DIR/zsh/.aliases ~/
 cp $INST_DIR/zsh/.functions ~/
 cp $INST_DIR/zsh/.zsh_local ~/
@@ -58,7 +64,18 @@ cp $INST_DIR/zsh/.zshrc ~/
 chmod 750 ~/.aliases
 chmod 750 ~/.functions
 chmod 750 ~/.zshrc
+
+# reload prompt
+source  ~/.zshrc 
+
+# spaceship prompt
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"\n
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"\n
+
+# zsh syntax highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# zsh autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 #----------------------------------------------------------------------------
