@@ -71,20 +71,19 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    zsh-syntax-highlighting 
-    zsh-autosuggestions
-    common-aliases
-    aws
-    autopep8
-    dotenv
-    git
-    heroku 
-    docker-compose
-    docker
-    jsontools
-    virtualenv
-    terraform
-    )
+   docker
+   docker-compose
+   dotenv
+   extract
+   git
+   git-prompt
+   jsontools
+   nvm
+   terraform
+   yarn
+   zsh-autosuggestions
+   zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,7 +113,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias
+# local zsh shell configuration
 if [[ -r ~/.zsh_local ]]; then
   source ~/.zsh_local
 fi
