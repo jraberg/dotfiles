@@ -1,9 +1,7 @@
 ##############################################################################
 #
-# Definitions of alias 
-# Please check alias in oh-my-zsh plugin common-alias at
-#  https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/common-aliases
-# 
+# Custom alias
+#
 ##############################################################################
 
 alias ..="cd .."
@@ -12,9 +10,7 @@ alias ...="cd ../.."
 #----------------------------------------------------------------------------
 # Shortcuts
 #----------------------------------------------------------------------------
-alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
 alias pp="cd ~/projects"
 alias bb="cd ~/bitbucket"
 alias gh="cd ~/github.com"
@@ -34,14 +30,6 @@ alias j='jobs -l'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
-
-# Don't delete root (/) and prompt if deleting more than 3 files
-alias rm='rm -I --preserve-root'
-
-# Protect changes on root
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
 
 # Use colordiff
 alias diff='colordiff'
@@ -94,9 +82,10 @@ alias cpuinfo='lscpu'
 alias mount='mount |column -t'
 
 #----------------------------------------------------------------------------
-# Definitions of alias for Docker
+# Definitions of alias for ssh
 #---------------------------------------------------------------------------- 
 alias sshagt='eval "$(ssh-agent -s)"'
+alias gk="eval $(ssh-agent) && ssh-add -K ~/.ssh/ith.com.jr"
 
 #----------------------------------------------------------------------------
 # Definitions of alias for Docker
@@ -109,3 +98,4 @@ alias dkcpup="docker-compose up -d"
 alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
+
