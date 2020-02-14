@@ -50,10 +50,13 @@
 [difftool]
   prompt = false
 
+[merge]
+  tool = vim
+  
 [alias]
   a = add
   
-  l = log -30 --graph --pretty=format:"%Cred%h\\ -\\ %C(bold\\ yellow)%d%Creset\\ %C(yellow)%s\\ %Creset\\ %C(blue)(%an)%Creset\\ %C(green)<%cr>%Creset"
+  l = log -60 --graph --pretty=format:"%Cred%h\\ -\\ %C(bold\\ yellow)%d%Creset\\ %C(yellow)%s\\ %Creset\\ %C(blue)(%an)%Creset\\ %C(green)<%cr>%Creset"
   ls =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   ll =  log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
@@ -61,13 +64,9 @@
   ld =  log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   lg =  log --graph
   lme = log --graph --author='Jonas Raberg'
-
+  p = pull --rebase
   co = checkout
-   
   c = commit
   cm = commit -m
     
   st = status
-
-[http]
-  sslverify = false
