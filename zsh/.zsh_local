@@ -12,7 +12,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-$(pyenv root)/completions/pyenv.zsh
+source $(pyenv root)/completions/pyenv.zsh
 
 # Node nvm
 export NVM_DIR="$HOME/.nvm"
