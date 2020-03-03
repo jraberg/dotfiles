@@ -9,7 +9,8 @@
   excludesfile = ~/.gitignore-global,~/.gitignore,.node.gitignore,.go.gitignore,.python.gitignore
   ignorecase = false
   whitespace = trailing-space,space-before-tab,indent-with-non-tab
-
+  pager = more -R
+  
 [user]
   name = jraberg
   email = jonas.raberg@gmail.com
