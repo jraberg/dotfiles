@@ -12,8 +12,7 @@ alias ...="cd ../.."
 #----------------------------------------------------------------------------
 alias dl="cd ~/Downloads"
 alias pp="cd ~/projects"
-alias bb="cd ~/bitbucket"
-alias gh="cd ~/github.com"
+alias gh="cd ~/git"
 
 alias g="git"
 alias v='vim'

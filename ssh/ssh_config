@@ -12,7 +12,6 @@ Host *
     ForwardAgent no
     ForwardX11 no
     ForwardX11Trusted yes
-    User nixcraft
     Port 22
     Protocol 2
     UserKnownHostsFile ~/.ssh/known_hosts
@@ -28,5 +27,5 @@ Host *
 Host github.com
 	HostName github.com
 	User git
-	IdentityFile ~/.ssh/github.com.jraberg
+	IdentityFile ~/.ssh/github.com.${GIT_USER}
 
