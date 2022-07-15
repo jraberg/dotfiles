@@ -1,7 +1,7 @@
 ##############################################################################
 #
-# Definitions of functions 
-# 
+# Definitions of functions
+#
 ##############################################################################
 
 
@@ -9,3 +9,21 @@
 # Function
 #----------------------------------------------------------------------------
 
+# aws
+function awsenv {
+  env | grep -i aws_ | sort
+}
+
+# tmux
+function tmuxnew() {
+  tmux new -s $1
+
+}
+
+function tmuxopen() {
+  tmux attach -t $1
+}
+
+function tmuxkill() {
+  tmux kill-session -t $1
+}

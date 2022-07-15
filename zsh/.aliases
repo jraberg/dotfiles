@@ -3,6 +3,21 @@
 # Custom alias
 #
 ##############################################################################
+#----------------------------------------------------------------------------
+# tmux
+#----------------------------------------------------------------------------
+alias tat="tmux new-session -As $(basename $PWD | tr . -)"
+alias tmuxkillall="tmux ls | cut -d : -f 1 | xargs -I {} tmux kill-session -t {}"
+
+#----------------------------------------------------------------------------
+# basic
+#----------------------------------------------------------------------------
+alias l='ls -lah'
+alias la='ls -lAh'
+alias ll='ls -lh'
+alias ln='ln -i'
+alias ls='ls -G'
+alias lsa='ls -lah'
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -82,13 +97,13 @@ alias mount='mount |column -t'
 
 #----------------------------------------------------------------------------
 # Definitions of alias for ssh
-#---------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------
 alias sshagt='eval "$(ssh-agent -s)"'
 alias gk="eval $(ssh-agent) && ssh-add -K ~/.ssh/ith.com.jr"
 
 #----------------------------------------------------------------------------
 # Definitions of alias for Docker
-#---------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------
 alias dkps="docker ps"
 alias dkst="docker stats"
 alias dkpsa="docker ps -a"
@@ -97,4 +112,3 @@ alias dkcpup="docker-compose up -d"
 alias dkcpdown="docker-compose down"
 alias dkcpstart="docker-compose start"
 alias dkcpstop="docker-compose stop"
-
