@@ -1,0 +1,33 @@
+[user]
+	name = Jonas Råberg
+	email = jraberg@users.noreply.github.com
+
+[init]
+defaultBranch = main
+
+[core]
+editor = "vim"
+excludesfile = $HOME/.gitignore_global
+ignorecase = false
+whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	pager = cat
+	autocrlf = input
+
+[color]
+ui = true
+commit = red
+
+[merge]
+tool = vim
+
+[alias]
+l = log -60 --graph --pretty=format:"%Cred%h\\ -\\ %C(bold\\ yellow)%d%Creset\\ %C(yellow)%s\\ %Creset\\ %C(blue)(%an)%Creset\\ %C(green)<%cr>%Creset"
+lme = log --graph --author='Jonas Raberg'
+st = status
+[pull]
+	ff = only
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

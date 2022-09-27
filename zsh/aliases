@@ -3,6 +3,7 @@
 # Custom alias
 #
 ##############################################################################
+
 #----------------------------------------------------------------------------
 # tmux
 #----------------------------------------------------------------------------
@@ -26,8 +27,8 @@ alias ...="cd ../.."
 # Shortcuts
 #----------------------------------------------------------------------------
 alias dl="cd ~/Downloads"
-alias pp="cd ~/projects"
-alias gh="cd ~/git"
+alias wsp="cd ~/workspace"
+alias vcs="cd ~/git"
 
 alias g="git"
 alias v='vim'
@@ -72,7 +73,7 @@ alias bc='bc -l'
 alias week='date +%V'
 
 # Weather in the terminal
-alias getweth='curl wttr.in/linkoping?lang=se'
+alias getweth='curl wttr.in/linkoping'
 
 #----------------------------------------------------------------------------
 # OS info
