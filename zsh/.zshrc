@@ -115,6 +115,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # local zsh shell configuration
-if [[ -r ~/.zsh_local ]]; then
-  source ~/.zsh_local
-fi
+[[ -r dotfiles/zsh/zsh_local ]] && source ~/.dotfiles/zsh/zsh_local
