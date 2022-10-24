@@ -73,7 +73,7 @@ alias bc='bc -l'
 alias week='date +%V'
 
 # Weather in the terminal
-alias getweth='curl wttr.in/linkoping'
+alias getw='curl wttr.in/linkoping'
 
 #----------------------------------------------------------------------------
 # OS info
@@ -100,7 +100,7 @@ alias mount='mount |column -t'
 # Definitions of alias for ssh
 #----------------------------------------------------------------------------
 alias sshagt='eval "$(ssh-agent -s)"'
-alias gk="eval $(ssh-agent) && ssh-add -K ~/.ssh/ith.com.jr"
+alias gk="eval $(ssh-agent) && ssh-add -K ~/.ssh/jraberg.github"
 
 #----------------------------------------------------------------------------
 # Definitions of alias for Docker
