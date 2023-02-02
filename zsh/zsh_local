@@ -10,13 +10,13 @@ setopt share_history
 setopt interactivecomments
 
 # Source aliases and functions
-for file in ~/.dotfiles/zsh/{aliases,functions,zsh_redbridge}; do
+for file in ~/.dotfiles/zsh/{aliases,functions,kubectl-completion,zsh_redbridge}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
 # Pager config
-#export PAGER=less
+export PAGER=more
 #export LESS=iMRXS
 
 # Python config

@@ -31,7 +31,7 @@ alias wsp="cd ~/workspace"
 alias vcs="cd ~/git"
 
 alias g="git"
-alias v='vim'
+alias v='nvim'
 alias df='df -H'
 alias du='du -ch'
 alias h='history'
